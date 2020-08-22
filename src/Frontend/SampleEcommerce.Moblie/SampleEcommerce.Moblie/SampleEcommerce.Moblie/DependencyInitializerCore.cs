@@ -1,7 +1,10 @@
 ﻿using Autofac;
+using ReactiveUI;
 using SampleEcommerce.Moblie.Abstractions;
 using SampleEcommerce.Moblie.Helper;
 using SampleEcommerce.Moblie.Services;
+using SampleEcommerce.Moblie.ViewModels;
+using SampleEcommerce.Moblie.Views;
 
 namespace SampleEcommerce.Moblie
 {
@@ -12,6 +15,11 @@ namespace SampleEcommerce.Moblie
         public IContainer Build()
         {
             var builder = new ContainerBuilder();
+
+            builder.RegisterType<LoginViewModel>().AsSelf();
+            builder.RegisterType<LoginPage>().As<IViewFor<LoginViewModel>>();
+            builder.RegisterType<HomeViewModel>().AsSelf();
+            builder.RegisterType<HomePage>().As<IViewFor<HomeViewModel>>();
 
             builder.RegisterType<AppSettings>().As<IAppSettings>().SingleInstance();
             builder.RegisterType<DialogService>().As<IDialogService>().SingleInstance();

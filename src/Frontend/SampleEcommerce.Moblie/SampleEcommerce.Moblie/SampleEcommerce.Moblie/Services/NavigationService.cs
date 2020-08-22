@@ -4,8 +4,8 @@ using ReactiveUI;
 using Xamarin.Forms;
 using System.Linq;
 using SampleEcommerce.Moblie.Abstractions;
-using SampleEcommerce.Moblie.Views;
 using SampleEcommerce.Moblie.ViewModels;
+using SampleEcommerce.Moblie.Views;
 
 namespace SampleEcommerce.Moblie.Services
 {

@@ -3,9 +3,9 @@
 namespace SampleEcommerce.Moblie.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage
+    public partial class HomePage
     {
-        public LoginPage()
+        public HomePage()
         {
             InitializeComponent();
         }
