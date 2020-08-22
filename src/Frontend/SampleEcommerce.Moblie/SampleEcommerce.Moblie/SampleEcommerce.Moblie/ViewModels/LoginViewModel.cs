@@ -1,24 +1,78 @@
-﻿using SampleEcommerce.Moblie.Views;
+﻿using System.Reactive;
+using System.Threading.Tasks;
+using ReactiveUI;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+using SampleEcommerce.Moblie.Abstractions;
+using SampleEcommerce.Moblie.Data;
+using SampleEcommerce.Moblie.Data.Dto;
+using SampleEcommerce.Moblie.Helper;
 
 namespace SampleEcommerce.Moblie.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        public Command LoginCommand { get; }
-
-        public LoginViewModel()
+        private string username;
+        public string Username
         {
-            LoginCommand = new Command(OnLoginClicked);
+            get => username;
+            set => this.RaiseAndSetIfChanged(ref username, value);
         }
 
-        private async void OnLoginClicked(object obj)
+        private string password;
+        public string Password
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            get => password;
+            set => this.RaiseAndSetIfChanged(ref password, value);
+        }
+
+        public ReactiveCommand<Unit, Unit> LoginCommand { get; }
+        public ReactiveCommand<Unit, Unit> LoginWithFacebookCommand { get; }
+        public ReactiveCommand<Unit, Unit> SignUpCommand { get; }
+
+        protected IAuthenticationService AuthenticationService;
+
+
+        public LoginViewModel(
+            INavigationService navigationService,
+            IAuthenticationService authentication,
+            IDialogService dialogService) : base(navigationService, dialogService)
+        {
+            AuthenticationService = authentication;
+
+            var canLogin = this.WhenAnyValue(x => x.Username, y => y.Password, (Username, Password) => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password));
+            LoginCommand = ReactiveCommand.CreateFromTask(Login, canLogin);
+            LoginCommand.IsExecuting.Subscribe(isExecuting => IsBusy = isExecuting);
+
+            LoginWithFacebookCommand = ReactiveCommand.Create(LoginWithFacebook);
+            LoginWithFacebookCommand.IsExecuting.Subscribe(isExecuting => IsBusy = isExecuting);
+
+            SignUpCommand = ReactiveCommand.CreateFromTask(SignUp);
+            SignUpCommand.IsExecuting.Subscribe(isExecuting => IsBusy = isExecuting);
+
+            CatchObservableExceptions(LoginCommand, LoginWithFacebookCommand, SignUpCommand);
+        }
+
+        private Task SignUp()
+        {
+            return Task.CompletedTask;//Sign up here
+        }
+
+        private async Task Login()
+        {
+            AuthenticationResult result = await AuthenticationService.LoginAsync(new AuthenticationDto { Username = Username, Password = Password.EncryptString() });
+            if (result.IsSuccess)
+            {
+                NavigationService.SetHomePage();
+            }
+            else
+            {
+                await DialogService.ShowMessage("Login in problem", result.Message);
+            }
+        }
+
+        private void LoginWithFacebook()
+        {
+
         }
     }
 }
