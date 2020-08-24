@@ -6,8 +6,9 @@ using System.Linq;
 using SampleEcommerce.Mobile.Abstractions;
 using SampleEcommerce.Mobile.ViewModels;
 using SampleEcommerce.Mobile.Views;
+using SampleEcommerce.Mobile.Services.Authentication;
 
-namespace SampleEcommerce.Mobile.Services
+namespace SampleEcommerce.Mobile.Services.Navigation
 {
     public class NavigationService : INavigationService
     {

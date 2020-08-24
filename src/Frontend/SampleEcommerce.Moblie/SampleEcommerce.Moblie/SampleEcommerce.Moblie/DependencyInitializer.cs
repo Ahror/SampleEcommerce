@@ -6,6 +6,8 @@ using SampleEcommerce.Mobile.Services;
 using SampleEcommerce.Mobile.Services.Authentication;
 using SampleEcommerce.Mobile.Services.Cart;
 using SampleEcommerce.Mobile.Services.Catalog;
+using SampleEcommerce.Mobile.Services.Dialog;
+using SampleEcommerce.Mobile.Services.Navigation;
 using SampleEcommerce.Mobile.ViewModels;
 using SampleEcommerce.Mobile.Views;
 

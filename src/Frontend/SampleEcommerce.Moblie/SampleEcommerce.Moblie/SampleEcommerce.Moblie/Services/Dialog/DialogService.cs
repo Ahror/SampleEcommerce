@@ -1,8 +1,7 @@
-﻿using SampleEcommerce.Mobile.Abstractions;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace SampleEcommerce.Mobile.Services
+namespace SampleEcommerce.Mobile.Services.Dialog
 {
 
     public class DialogService : IDialogService
