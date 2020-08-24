@@ -1,7 +1,5 @@
 ﻿using Refit;
-using SampleEcommerce.Mobile.Data;
 using SampleEcommerce.Mobile.Models.Cart;
-using System;
 using System.Threading.Tasks;
 
 namespace SampleEcommerce.Mobile.Services.Cart

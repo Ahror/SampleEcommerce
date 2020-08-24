@@ -20,8 +20,4 @@
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\Catalog\" />
-  </ItemGroup>
 </Project>
