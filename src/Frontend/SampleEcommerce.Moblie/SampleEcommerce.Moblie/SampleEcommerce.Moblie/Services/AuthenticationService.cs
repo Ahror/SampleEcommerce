@@ -1,12 +1,12 @@
 ﻿using Refit;
-using SampleEcommerce.Moblie.Abstractions;
-using SampleEcommerce.Moblie.Abstractions.Api;
-using SampleEcommerce.Moblie.Data;
-using SampleEcommerce.Moblie.Data.Dto;
-using SampleEcommerce.Moblie.Helper;
+using SampleEcommerce.Mobile.Abstractions;
+using SampleEcommerce.Mobile.Abstractions.Api;
+using SampleEcommerce.Mobile.Data;
+using SampleEcommerce.Mobile.Data.Dto;
+using SampleEcommerce.Mobile.Helper;
 using System.Threading.Tasks;
 
-namespace SampleEcommerce.Moblie.Services
+namespace SampleEcommerce.Mobile.Services
 {
     public class AuthenticationService : IAuthenticationService
     {

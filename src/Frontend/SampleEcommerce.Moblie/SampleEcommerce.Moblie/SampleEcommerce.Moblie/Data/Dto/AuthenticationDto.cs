@@ -1,4 +1,4 @@
-﻿namespace SampleEcommerce.Moblie.Data.Dto
+﻿namespace SampleEcommerce.Mobile.Data.Dto
 {
     public class AuthenticationDto
     {

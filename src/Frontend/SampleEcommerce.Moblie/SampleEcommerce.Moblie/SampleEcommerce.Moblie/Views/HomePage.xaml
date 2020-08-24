@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <abstractions:BaseContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:abstractions="clr-namespace:SampleEcommerce.Moblie.Abstractions"
-    xmlns:viewModels="clr-namespace:SampleEcommerce.Moblie.ViewModels"
+    xmlns:abstractions="clr-namespace:SampleEcommerce.Mobile.Abstractions"
+    xmlns:viewModels="clr-namespace:SampleEcommerce.Mobile.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Class="SampleEcommerce.Moblie.Views.HomePage"
+    x:Class="SampleEcommerce.Mobile.Views.HomePage"
     Visual="Material">
     <Grid>
         <Label Text="Home page"/>

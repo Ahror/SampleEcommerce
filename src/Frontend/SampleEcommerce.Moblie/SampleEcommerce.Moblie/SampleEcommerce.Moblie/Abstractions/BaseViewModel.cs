@@ -4,7 +4,7 @@ using System.Reactive.Linq;
 using System.Threading.Tasks;
 using ReactiveUI;
 
-namespace SampleEcommerce.Moblie.Abstractions
+namespace SampleEcommerce.Mobile.Abstractions
 {
     public abstract class BaseViewModel : ReactiveObject
     {

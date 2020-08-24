@@ -1,32 +1,28 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using SampleEcommerce.Moblie.Services;
-using SampleEcommerce.Moblie.Views;
+﻿using Xamarin.Forms;
+using Autofac;
+using SampleEcommerce.Mobile.Abstractions;
 
-namespace SampleEcommerce.Moblie
+namespace SampleEcommerce.Mobile
 {
     public partial class App : Application
     {
-
+        private static IContainer _container;
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            InitializeDependencies();
+            InitializePage();
         }
 
-        protected override void OnStart()
+        private void InitializePage()
         {
+            _container.Resolve<INavigationService>().InitMainPage();
         }
 
-        protected override void OnSleep()
+        private void InitializeDependencies()
         {
-        }
-
-        protected override void OnResume()
-        {
+            var dependencyInitializer = new DependencyInitializerCore();
+            _container = dependencyInitializer.Build();
         }
     }
 }

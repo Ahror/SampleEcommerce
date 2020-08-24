@@ -2,12 +2,12 @@
 using System.Threading.Tasks;
 using ReactiveUI;
 using System;
-using SampleEcommerce.Moblie.Abstractions;
-using SampleEcommerce.Moblie.Data;
-using SampleEcommerce.Moblie.Data.Dto;
-using SampleEcommerce.Moblie.Helper;
+using SampleEcommerce.Mobile.Abstractions;
+using SampleEcommerce.Mobile.Data;
+using SampleEcommerce.Mobile.Data.Dto;
+using SampleEcommerce.Mobile.Helper;
 
-namespace SampleEcommerce.Moblie.ViewModels
+namespace SampleEcommerce.Mobile.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {

@@ -1,14 +1,15 @@
 ﻿using Autofac;
 using ReactiveUI;
-using SampleEcommerce.Moblie.Abstractions;
-using SampleEcommerce.Moblie.Helper;
-using SampleEcommerce.Moblie.Services;
-using SampleEcommerce.Moblie.ViewModels;
-using SampleEcommerce.Moblie.Views;
+using SampleEcommerce.Mobile.Abstractions;
+using SampleEcommerce.Mobile.Helper;
+using SampleEcommerce.Mobile.Services;
+using SampleEcommerce.Mobile.Services.Cart;
+using SampleEcommerce.Mobile.ViewModels;
+using SampleEcommerce.Mobile.Views;
 
-namespace SampleEcommerce.Moblie
+namespace SampleEcommerce.Mobile
 {
-    public abstract class DependencyInitializerCore
+    public class DependencyInitializerCore
     {
         public static IContainer Container { get; private set; }
 
@@ -22,15 +23,13 @@ namespace SampleEcommerce.Moblie
             builder.RegisterType<HomePage>().As<IViewFor<HomeViewModel>>();
 
             builder.RegisterType<AppSettings>().As<IAppSettings>().SingleInstance();
+            builder.RegisterType<CartService>().As<ICartService>().SingleInstance();
             builder.RegisterType<DialogService>().As<IDialogService>().SingleInstance();
             builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
             builder.RegisterType<AuthenticationService>().As<IAuthenticationService>().SingleInstance();
 
-            RegisterTypes(builder);
             return Container = builder.Build();
         }
-
-        protected abstract void RegisterTypes(ContainerBuilder builder);
     }
 
 }
