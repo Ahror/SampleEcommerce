@@ -31,3 +31,67 @@ Microservices came in a picture for building systems that were too big. The idea
 
 <img src="art/ECommerceArchitecture.png" style="max-width:100%;"/>
 
+
+## List of micro-services and infrastructure components
+
+<table>
+   <thead>
+    <tr><th>№</th>
+    <th>Service</th>
+    <th>Description</th>
+    <th>Build status</th>
+    <th>Endpoints</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+        <td align="center">1.</td>
+        <td>Cart API (DDD, CQRS, EF Core, SQL Server)</td>
+        <td>Manages customer basket in order to keep items on in-memory cache using redis</td>
+        <td>(Soon)</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td align="center">2.</td>
+        <td>Catalog API (CRUD, Repository, Sql Server)</td>
+        <td>Manages catalogs with </td>
+        <td>(Soon)</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td align="center">3.</td>
+        <td>Delivery API (CRUD, Repository, MongoDB)</td>
+        <td>Deals with Delivery book/orders and their statuses	</td>
+        <td>(Soon)</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td align="center">4.</td>
+        <td>Search API (.NET Core + ElasticSearch)</td>
+        <td>Searching items/td>
+        <td>
+           (Soon)
+        </td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td align="center">5.</td>
+        <td>Inventory API(soon) (DDD, CQRS, SQL Server)</td>
+        <td>Inventory items</td>
+        <td>
+           (Soon)
+        </td>
+        <td></td>
+    </tr>
+    </tbody>
+    </table>
+
+# Contributing
+
+1. Fork it
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -m 'Adds some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request
+    
+
+
