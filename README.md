@@ -29,5 +29,5 @@ Microservices came in a picture for building systems that were too big. The idea
 - Service components. Services components communicate with each other via service discovery
 - Bounded by contexts. It encapsulates the details of a single domain, and define the integration with other domains. It is about implementing a business capability.
 
-<img src="art/ECommerceArchitecture.png.png" style="max-width:100%;"/>
+<img src="art/ECommerceArchitecture.png" style="max-width:100%;"/>
 
