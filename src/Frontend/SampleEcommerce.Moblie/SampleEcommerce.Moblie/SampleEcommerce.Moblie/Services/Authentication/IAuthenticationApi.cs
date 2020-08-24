@@ -3,7 +3,7 @@ using SampleEcommerce.Mobile.Data;
 using SampleEcommerce.Mobile.Data.Dto;
 using System.Threading.Tasks;
 
-namespace SampleEcommerce.Mobile.Abstractions.Api
+namespace SampleEcommerce.Mobile.Services.Authentication
 {
     public interface IAuthenticationApi
     {

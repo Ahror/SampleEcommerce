@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace SampleEcommerce.Mobile.Abstractions
+namespace SampleEcommerce.Mobile.Services.Dialog
 {
     public interface IDialogService
     {

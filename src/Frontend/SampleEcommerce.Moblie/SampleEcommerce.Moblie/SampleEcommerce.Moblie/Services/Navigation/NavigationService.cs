@@ -6,8 +6,9 @@ using System.Linq;
 using SampleEcommerce.Mobile.Abstractions;
 using SampleEcommerce.Mobile.ViewModels;
 using SampleEcommerce.Mobile.Views;
+using SampleEcommerce.Mobile.Services.Authentication;
 
-namespace SampleEcommerce.Mobile.Services
+namespace SampleEcommerce.Mobile.Services.Navigation
 {
     public class NavigationService : INavigationService
     {
@@ -82,7 +83,7 @@ namespace SampleEcommerce.Mobile.Services
 
         private Page GetView<TViewModel>(TViewModel viewMode) where TViewModel : BaseViewModel
         {
-            var view = DependencyInitializerCore.Container.Resolve<IViewFor<TViewModel>>();
+            var view = DependencyInitializer.Container.Resolve<IViewFor<TViewModel>>();
             ((IViewFor)view).ViewModel = viewMode;
             return (Page)view;
         }
@@ -90,13 +91,13 @@ namespace SampleEcommerce.Mobile.Services
         private Page GetView<TVieWModel>(params (string paramaterName, object value)[] parameters) where TVieWModel : BaseViewModel
         {
             var namedParameters = parameters.Select(param => new NamedParameter(param.paramaterName, param.value));
-            var viewModel = DependencyInitializerCore.Container.Resolve<TVieWModel>(namedParameters);
+            var viewModel = DependencyInitializer.Container.Resolve<TVieWModel>(namedParameters);
             return GetView(viewModel);
         }
 
         private Page GetView<TVieWModel>() where TVieWModel : BaseViewModel
         {
-            var viewModel = DependencyInitializerCore.Container.Resolve<TVieWModel>();
+            var viewModel = DependencyInitializer.Container.Resolve<TVieWModel>();
             return GetView(viewModel);
         }
 

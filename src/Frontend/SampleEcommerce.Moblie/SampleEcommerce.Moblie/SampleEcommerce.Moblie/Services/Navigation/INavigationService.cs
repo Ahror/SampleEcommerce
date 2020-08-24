@@ -1,6 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using SampleEcommerce.Mobile.Abstractions;
+using System.Threading.Tasks;
 
-namespace SampleEcommerce.Mobile.Abstractions
+namespace SampleEcommerce.Mobile.Services.Navigation
 {
     public interface INavigationService
     {
