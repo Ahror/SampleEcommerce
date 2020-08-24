@@ -1,6 +1,6 @@
-﻿using SampleEcommerce.Moblie.Data;
+﻿using SampleEcommerce.Mobile.Data;
 
-namespace SampleEcommerce.Moblie.Abstractions
+namespace SampleEcommerce.Mobile.Abstractions
 {
     public interface IAppSettings
     {

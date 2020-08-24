@@ -1,6 +1,6 @@
-﻿using SampleEcommerce.Moblie.Abstractions;
+﻿using SampleEcommerce.Mobile.Abstractions;
 
-namespace SampleEcommerce.Moblie.ViewModels
+namespace SampleEcommerce.Mobile.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {

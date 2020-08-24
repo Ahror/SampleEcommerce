@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace SampleEcommerce.Moblie.Components
+namespace SampleEcommerce.Mobile.Components
 {
     public class RatingView : StackLayout
     {

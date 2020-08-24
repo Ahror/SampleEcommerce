@@ -1,7 +1,7 @@
 ﻿using ReactiveUI;
 using Xamarin.Forms;
 
-namespace SampleEcommerce.Moblie.Abstractions
+namespace SampleEcommerce.Mobile.Abstractions
 {
     public abstract class BaseContentPage<TViewModel> : ContentPage, IViewFor<TViewModel>
         where TViewModel : BaseViewModel

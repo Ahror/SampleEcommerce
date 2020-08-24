@@ -1,8 +1,8 @@
-﻿using SampleEcommerce.Moblie.Abstractions;
+﻿using SampleEcommerce.Mobile.Abstractions;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace SampleEcommerce.Moblie.Services
+namespace SampleEcommerce.Mobile.Services
 {
 
     public class DialogService : IDialogService

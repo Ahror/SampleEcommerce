@@ -1,4 +1,4 @@
-﻿namespace SampleEcommerce.Moblie.Data
+﻿namespace SampleEcommerce.Mobile.Data
 {
     public class CustomerToAdd
     {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace SampleEcommerce.Moblie.Abstractions
+namespace SampleEcommerce.Mobile.Abstractions
 {
     public interface INavigationService
     {

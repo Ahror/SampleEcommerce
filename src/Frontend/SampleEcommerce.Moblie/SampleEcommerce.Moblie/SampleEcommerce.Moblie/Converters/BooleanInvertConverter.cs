@@ -2,7 +2,7 @@
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace SampleEcommerce.Moblie.Converters
+namespace SampleEcommerce.Mobile.Converters
 {
     public class BooleanInvertConverter : IValueConverter
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SampleEcommerce.Moblie.Helper
+namespace SampleEcommerce.Mobile.Helper
 {
     public static class Constants
     {

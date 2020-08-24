@@ -1,9 +1,9 @@
 ﻿using Refit;
-using SampleEcommerce.Moblie.Data;
-using SampleEcommerce.Moblie.Data.Dto;
+using SampleEcommerce.Mobile.Data;
+using SampleEcommerce.Mobile.Data.Dto;
 using System.Threading.Tasks;
 
-namespace SampleEcommerce.Moblie.Abstractions.Api
+namespace SampleEcommerce.Mobile.Abstractions.Api
 {
     public interface IAuthenticationApi
     {

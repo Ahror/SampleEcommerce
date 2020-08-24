@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
-using SampleEcommerce.Moblie.Abstractions;
-using SampleEcommerce.Moblie.Data;
+using SampleEcommerce.Mobile.Abstractions;
+using SampleEcommerce.Mobile.Data;
 using System.Runtime.CompilerServices;
 using Xamarin.Essentials;
 
-namespace SampleEcommerce.Moblie.Helper
+namespace SampleEcommerce.Mobile.Helper
 {
     public class AppSettings : IAppSettings
     {

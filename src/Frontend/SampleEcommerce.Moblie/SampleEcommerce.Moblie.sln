@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleEcommerce.Moblie.Android", "SampleEcommerce.Moblie\SampleEcommerce.Moblie.Android\SampleEcommerce.Moblie.Android.csproj", "{A1E93BE6-1638-45CE-901C-AB0B8A5978D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleEcommerce.Mobile.Android", "SampleEcommerce.Moblie\SampleEcommerce.Moblie.Android\SampleEcommerce.Mobile.Android.csproj", "{A1E93BE6-1638-45CE-901C-AB0B8A5978D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleEcommerce.Moblie.iOS", "SampleEcommerce.Moblie\SampleEcommerce.Moblie.iOS\SampleEcommerce.Moblie.iOS.csproj", "{45E70A0E-2B4F-4A06-B71D-019370808F2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleEcommerce.Mobile.iOS", "SampleEcommerce.Moblie\SampleEcommerce.Moblie.iOS\SampleEcommerce.Mobile.iOS.csproj", "{45E70A0E-2B4F-4A06-B71D-019370808F2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleEcommerce.Moblie", "SampleEcommerce.Moblie\SampleEcommerce.Moblie\SampleEcommerce.Moblie.csproj", "{127CB7AD-7619-42E4-BFD1-8D7DBF38187A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleEcommerce.Mobile", "SampleEcommerce.Moblie\SampleEcommerce.Moblie\SampleEcommerce.Mobile.csproj", "{127CB7AD-7619-42E4-BFD1-8D7DBF38187A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

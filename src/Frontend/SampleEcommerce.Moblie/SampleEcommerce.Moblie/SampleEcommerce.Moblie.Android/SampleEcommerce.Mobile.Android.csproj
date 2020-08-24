@@ -92,9 +92,9 @@
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SampleEcommerce.Moblie\SampleEcommerce.Moblie.csproj">
-      <Project>{703E7917-F705-444D-8D1E-E8BF4403953F}</Project>
-      <Name>SampleEcommerce.Moblie</Name>
+    <ProjectReference Include="..\SampleEcommerce.Moblie\SampleEcommerce.Mobile.csproj">
+      <Project>{127CB7AD-7619-42E4-BFD1-8D7DBF38187A}</Project>
+      <Name>SampleEcommerce.Mobile</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

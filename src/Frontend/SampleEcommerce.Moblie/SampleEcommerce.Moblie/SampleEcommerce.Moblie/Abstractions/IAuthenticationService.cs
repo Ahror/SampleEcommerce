@@ -1,8 +1,8 @@
-﻿using SampleEcommerce.Moblie.Data;
-using SampleEcommerce.Moblie.Data.Dto;
+﻿using SampleEcommerce.Mobile.Data;
+using SampleEcommerce.Mobile.Data.Dto;
 using System.Threading.Tasks;
 
-namespace SampleEcommerce.Moblie.Abstractions
+namespace SampleEcommerce.Mobile.Abstractions
 {
     public interface IAuthenticationService
     {

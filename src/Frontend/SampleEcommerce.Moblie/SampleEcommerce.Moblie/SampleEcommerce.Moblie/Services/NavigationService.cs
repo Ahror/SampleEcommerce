@@ -3,11 +3,11 @@ using Autofac;
 using ReactiveUI;
 using Xamarin.Forms;
 using System.Linq;
-using SampleEcommerce.Moblie.Abstractions;
-using SampleEcommerce.Moblie.ViewModels;
-using SampleEcommerce.Moblie.Views;
+using SampleEcommerce.Mobile.Abstractions;
+using SampleEcommerce.Mobile.ViewModels;
+using SampleEcommerce.Mobile.Views;
 
-namespace SampleEcommerce.Moblie.Services
+namespace SampleEcommerce.Mobile.Services
 {
     public class NavigationService : INavigationService
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using SampleEcommerce.Moblie.ViewModels;
-using SampleEcommerce.Moblie.Views;
+using SampleEcommerce.Mobile.ViewModels;
+using SampleEcommerce.Mobile.Views;
 using Xamarin.Forms;
 
-namespace SampleEcommerce.Moblie
+namespace SampleEcommerce.Mobile
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {

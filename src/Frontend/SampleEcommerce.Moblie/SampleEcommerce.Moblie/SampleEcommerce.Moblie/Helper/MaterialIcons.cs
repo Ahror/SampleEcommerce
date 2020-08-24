@@ -1,4 +1,4 @@
-﻿namespace SampleEcommerce.Moblie.Helper
+﻿namespace SampleEcommerce.Mobile.Helper
 {
     public static class MaterialIcons
     {
