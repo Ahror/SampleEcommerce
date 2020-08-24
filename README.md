@@ -12,7 +12,7 @@ The microservices architecture style is an approach for developing small service
 
 Microservices came in a picture for building systems that were too big. The idea behind microservices is that there are some applications which can easily build and maintain when they are broken down into smaller applications which work together. Each component is continuously developed and separately managed, and the application is then merely the sum of its constituent elements. Whereas in traditional “monolithic” application which is all developed all in one piece.
 
-## Motivation
+# Motivation
 
 - Developing separately deployable and scalable micro-services based on best practies using containerization
 - Developing cross-platform beautiful mobile apps using Xamarin.Forms
@@ -28,3 +28,6 @@ Microservices came in a picture for building systems that were too big. The idea
 - Separately deployed components. Each component is deployed separately. If one component needs changes, others don’t have to deploy again.
 - Service components. Services components communicate with each other via service discovery
 - Bounded by contexts. It encapsulates the details of a single domain, and define the integration with other domains. It is about implementing a business capability.
+
+<img src="art/ECommerceArchitecture.png.png" style="max-width:100%;"/>
+
