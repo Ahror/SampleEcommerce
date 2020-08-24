@@ -21,7 +21,7 @@ namespace SampleEcommerce.Mobile
 
         private void InitializeDependencies()
         {
-            var dependencyInitializer = new DependencyInitializerCore();
+            var dependencyInitializer = new DependencyInitializer();
             _container = dependencyInitializer.Build();
         }
     }

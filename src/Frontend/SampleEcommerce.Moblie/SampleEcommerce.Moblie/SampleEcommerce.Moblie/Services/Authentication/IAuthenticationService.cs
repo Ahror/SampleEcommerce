@@ -2,7 +2,7 @@
 using SampleEcommerce.Mobile.Data.Dto;
 using System.Threading.Tasks;
 
-namespace SampleEcommerce.Mobile.Abstractions
+namespace SampleEcommerce.Mobile.Services.Authentication
 {
     public interface IAuthenticationService
     {
