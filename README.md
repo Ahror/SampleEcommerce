@@ -75,7 +75,7 @@ Microservices came in a picture for building systems that were too big. The idea
     </tr>    
     <tr>
         <td align="center">5.</td>
-        <td>Inventory API(soon) (DDD, CQRS, SQL Server)</td>
+        <td>Inventory API (DDD, CQRS, SQL Server)</td>
         <td>Inventory items</td>
         <td>
            (Soon)
