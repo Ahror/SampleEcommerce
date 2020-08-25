@@ -6,6 +6,9 @@ using SampleEcommerce.Mobile.Abstractions;
 using SampleEcommerce.Mobile.Data;
 using SampleEcommerce.Mobile.Data.Dto;
 using SampleEcommerce.Mobile.Helper;
+using SampleEcommerce.Mobile.Services.Navigation;
+using SampleEcommerce.Mobile.Services.Authentication;
+using SampleEcommerce.Mobile.Services.Dialog;
 
 namespace SampleEcommerce.Mobile.ViewModels
 {
@@ -72,7 +75,7 @@ namespace SampleEcommerce.Mobile.ViewModels
 
         private void LoginWithFacebook()
         {
-
+            //Login with Facebook
         }
     }
 }

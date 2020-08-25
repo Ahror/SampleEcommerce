@@ -79,7 +79,7 @@ namespace SampleEcommerce.Mobile.Services.Navigation
             return Navigation.PopAsync();
         }
 
-        #region ResolvinPage
+        #region ResolvingPage
 
         private Page GetView<TViewModel>(TViewModel viewMode) where TViewModel : BaseViewModel
         {
@@ -115,7 +115,7 @@ namespace SampleEcommerce.Mobile.Services.Navigation
 
         public void SetHomePage()
         {
-            SetMainPage<LoginViewModel>();
+            SetMainPage<HomeViewModel>();
         }
         #endregion
     }

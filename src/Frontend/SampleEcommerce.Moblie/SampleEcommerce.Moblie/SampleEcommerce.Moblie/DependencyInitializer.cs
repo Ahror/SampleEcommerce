@@ -13,7 +13,7 @@ using SampleEcommerce.Mobile.Views;
 
 namespace SampleEcommerce.Mobile
 {
-    public abstract class DependencyInitializer
+    public class DependencyInitializer
     {
         public static IContainer Container { get; private set; }
 
@@ -34,12 +34,8 @@ namespace SampleEcommerce.Mobile
             builder.RegisterType<CartService>().As<ICartService>().SingleInstance();
             builder.RegisterType<CatalogService>().As<ICatalogService>().SingleInstance();
 
-
-            RegisterTypes(builder);
             return Container = builder.Build();
         }
-
-        protected abstract void RegisterTypes(ContainerBuilder builder);
     }
 
 }

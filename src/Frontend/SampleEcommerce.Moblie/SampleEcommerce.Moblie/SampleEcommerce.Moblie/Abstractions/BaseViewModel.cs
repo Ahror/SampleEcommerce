@@ -3,6 +3,8 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using ReactiveUI;
+using SampleEcommerce.Mobile.Services.Dialog;
+using SampleEcommerce.Mobile.Services.Navigation;
 
 namespace SampleEcommerce.Mobile.Abstractions
 {
