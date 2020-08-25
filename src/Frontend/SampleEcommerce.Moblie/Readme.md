@@ -14,7 +14,7 @@ Xamarin.Forms provides a way to quickly build native apps for iOS, Android, Wind
 - Open Source Technology with Strong Corporate Support
 - Simplified Maintenance
 
-# Screens
+# Screens (soon)
 
 <img src="https://github.com/Ahror/SampleEcommerce/blob/master/art/MobileLoginPage.png" style="max-width:20px;"/>
 
