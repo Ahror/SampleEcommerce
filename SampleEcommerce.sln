@@ -89,6 +89,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "art", "art", "{3E8605C6-B479-4B34-9960-C779B3E9F84D}"
 	ProjectSection(SolutionItems) = preProject
 		art\ECommerceArchitecture.png = art\ECommerceArchitecture.png
+		art\MobileLoginPage.png = art\MobileLoginPage.png
+		art\MobileSignUpPage.png = art\MobileSignUpPage.png
 	EndProjectSection
 EndProject
 Global
