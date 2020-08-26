@@ -20,7 +20,7 @@ Xamarin.Forms provides a way to quickly build native apps for iOS, Android, Wind
     <div style="float: left; width:50%; ">
      <img src="https://github.com/Ahror/SampleEcommerce/blob/master/art/MobileLoginPage.png" style="max-width:20px;"/>
     </div>
-    <div style="float: right; width:50%; ">
+    <div style="float: left; width:50%; ">
      <img src="https://github.com/Ahror/SampleEcommerce/blob/master/art/MobileSignUpPage.png" style="max-width:20px;"/>
    </div>
 </div>
