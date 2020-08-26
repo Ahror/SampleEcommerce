@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<abstractions:BaseContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:abstractions="clr-namespace:SampleEcommerce.Mobile.Abstractions"
+    xmlns:viewModels="clr-namespace:SampleEcommerce.Mobile.ViewModels"
+    x:TypeArguments="viewModels:LoginViewModel"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="SampleEcommerce.Mobile.Views.SignUpPage"
+    Visual="Material">
+    <abstractions:BaseContentPage.Resources>
+        <Color x:Key="AccentColor">#4491e7</Color>
+        <Color x:Key="TextColor">#ffffff</Color>
+    </abstractions:BaseContentPage.Resources>
+    <Grid BackgroundColor="{StaticResource AccentColor}">
+        <Label
+            VerticalOptions="Start"
+            Grid.Row="0"
+            Margin="10,60,0,0"
+            FontAttributes="Bold"
+            FontSize="Title"
+            Text="Hello Dear Customer"
+            HorizontalOptions="Center"
+            TextColor="{StaticResource TextColor}" />
+        <Frame BackgroundColor="{StaticResource TextColor}" Margin="0,150,0,-40" CornerRadius="40">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"  />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    TextColor="{StaticResource AccentColor}"
+                    Margin="0,0,0,20"
+                    Text="Sign up" />
+                <StackLayout Grid.Row="1" Orientation="Vertical" VerticalOptions="Start" Margin="0,0,0,10">
+                    <Entry BackgroundColor="Transparent" MaxLength="64" Placeholder="Login" Text="{Binding Login}" />
+                    <Entry BackgroundColor="Transparent" MaxLength="64" IsPassword="True" Placeholder="Password" Text="{Binding Password}"/>
+                    <Entry BackgroundColor="Transparent" MaxLength="64" Placeholder="Email" Text="{Binding Email}"/>
+                    <Entry BackgroundColor="Transparent" MaxLength="64" Placeholder="First name" Text="{Binding FirstName}"/>
+                    <Entry BackgroundColor="Transparent" MaxLength="64" Placeholder="Last name" Text="{Binding LastName}"/>
+                    <Entry BackgroundColor="Transparent" MaxLength="64" Placeholder="Phone nubmer" Text="{Binding PhoneNumber}"/>
+                </StackLayout>
+                <Button
+                        Grid.Row="2"
+                        Command="{Binding SignUpCommand}"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        Text="Sign up"
+                        TextColor="White" />
+                <Label
+                        Grid.Row="3"
+                        Padding="50,0"
+                        HorizontalOptions="Center"
+                        LineBreakMode="WordWrap"
+                        Text="By tapping Sign in, you agree with our Term of Service and Privacy Policy"
+                        TextColor="DarkGray" />
+            </Grid>
+
+        </Frame>
+    </Grid>
+
+</abstractions:BaseContentPage>
