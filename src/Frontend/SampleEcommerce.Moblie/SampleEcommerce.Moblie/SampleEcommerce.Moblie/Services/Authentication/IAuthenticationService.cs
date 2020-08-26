@@ -7,7 +7,7 @@ namespace SampleEcommerce.Mobile.Services.Authentication
     public interface IAuthenticationService
     {
         bool IsAuthenticated();
-        Task<bool> CheckLoginAsync(string login, bool isUser);
+        Task<bool> CheckLoginAsync(string login);
 
         Task<AuthenticationResult> LoginAsync(AuthenticationDto authenticationDto);
         Task<AuthenticationResult> SignUp(CustomerToAdd userToAdd);
