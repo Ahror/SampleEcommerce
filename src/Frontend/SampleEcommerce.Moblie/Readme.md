@@ -16,6 +16,6 @@ Xamarin.Forms provides a way to quickly build native apps for iOS, Android, Wind
 
 # Screens (soon)
 
-<img src="https://github.com/Ahror/SampleEcommerce/blob/master/art/MobileLoginPage.png" width="210"/>
-<img src="https://github.com/Ahror/SampleEcommerce/blob/master/art/MobileSignUpPage.png" width="210"/>
-
+Login page             |  Sign up page
+:-------------------------:|:-------------------------:
+![](https://github.com/Ahror/SampleEcommerce/blob/master/art/MobileLoginPage.png)  |  ![](https://github.com/Ahror/SampleEcommerce/blob/master/art/MobileSignUpPage.png)
