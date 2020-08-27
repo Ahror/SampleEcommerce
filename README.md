@@ -67,7 +67,7 @@ Microservices came in a picture for building systems that were too big. The idea
     <tr>
         <td align="center">4.</td>
         <td>Search API (.NET Core + ElasticSearch)</td>
-        <td>Searching items/td>
+        <td>Searching items </td>
         <td>
            (Soon)
         </td>
