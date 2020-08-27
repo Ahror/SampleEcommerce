@@ -53,7 +53,7 @@ Microservices came in a picture for building systems that were too big. The idea
     <tr>
         <td align="center">2.</td>
         <td>Catalog API (CRUD, Repository, Sql Server)</td>
-        <td>Catalog management </td>
+        <td>Catalog management  </td>
         <td>(Soon)</td>
         <td></td>
     </tr>    
