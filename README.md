@@ -53,7 +53,7 @@ Microservices came in a picture for building systems that were too big. The idea
     <tr>
         <td align="center">2.</td>
         <td>Catalog API (CRUD, Repository, Sql Server)</td>
-        <td>Manages catalogs with </td>
+        <td>Catalog management </td>
         <td>(Soon)</td>
         <td></td>
     </tr>    
@@ -75,8 +75,8 @@ Microservices came in a picture for building systems that were too big. The idea
     </tr>    
     <tr>
         <td align="center">5.</td>
-        <td>Inventory API (DDD, CQRS, SQL Server)</td>
-        <td>Inventory items</td>
+        <td>Inventory API (CRUD, Repository, PostgreSQL)</td>
+        <td>Inventory management</td>
         <td>
            (Soon)
         </td>
