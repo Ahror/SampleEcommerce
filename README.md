@@ -75,7 +75,7 @@ Microservices came in a picture for building systems that were too big. The idea
     </tr>    
     <tr>
         <td align="center">5.</td>
-        <td>Inventory API (CRUD, Repository, PostgreSQL)</td>
+        <td>Inventory API (Dapper, Repository, PostgreSQL)</td>
         <td>Inventory management</td>
         <td>
            (Soon)
