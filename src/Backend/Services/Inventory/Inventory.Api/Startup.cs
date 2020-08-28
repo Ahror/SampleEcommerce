@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Inventory.Api.Data;
 using Inventory.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Npgsql;
 
 namespace Inventory.Api
 {
@@ -29,10 +29,11 @@ namespace Inventory.Api
         {
             services.AddControllers();
             services.AddScoped<IInventoryService, InventoryService>();
+            services.AddTransient<System.Data.IDbConnection>((sp) => new NpgsqlConnection(Configuration.GetConnectionString("InventoryConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, InventoryContext context)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -49,8 +50,6 @@ namespace Inventory.Api
             app.UseRouting();
 
             app.UseAuthorization();
-
-            DbInitializer.Initialize(context);
 
             app.UseEndpoints(endpoints =>
             {

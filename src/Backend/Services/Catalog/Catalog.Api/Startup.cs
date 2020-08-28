@@ -26,8 +26,6 @@ namespace Catalog.Api
             services.AddDbContext<CatalogContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("CatalogConnection")));
             services.AddScoped<ICatalogService, CatalogService>();
-
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, CatalogContext context)
