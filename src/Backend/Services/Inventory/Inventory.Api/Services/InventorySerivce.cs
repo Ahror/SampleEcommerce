@@ -1,53 +1,52 @@
-﻿using Inventory.Api.Data;
+﻿using Dapper;
 using Inventory.Api.Entities;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
+using System.Data;
 using System.Threading.Tasks;
 
 namespace Inventory.Api.Services
 {
     public class InventoryService : IInventoryService
     {
-        private readonly InventoryContext inventoryContext;
-        public InventoryService(InventoryContext inventoryContext)
+        protected IDbConnection connection;
+        public InventoryService(IDbConnection connection)
         {
-            this.inventoryContext = inventoryContext;
+            this.connection = connection;
         }
         public async Task<bool> CreateInventoryItemAsync(InventoryItem inventory)
         {
-            inventoryContext.Add(inventory);
-            return await inventoryContext.SaveChangesAsync() > 0;
+            var sql = "Insert into Inventories (ItemName,StockQty,ReorderQty,PriorityStatus,AddedDate) VALUES (@ItemName,@StockQty,@ReorderQty,@PriorityStatus,@AddedDate)";
+            return await connection.ExecuteAsync(sql, inventory) > 0;
         }
 
         public async Task<bool> DeleteInventoryItemAsync(int id)
         {
-            var inventory = inventoryContext.Inventories.FirstOrDefault(c => c.Id == id);
-            if (inventory == null) return false;
-
-            inventoryContext.Inventories.Remove(inventory);
-            return await inventoryContext.SaveChangesAsync() > 0;
+            var sql = "Delete FROM Inventories WHERE Id = @Id";
+            return await connection.ExecuteAsync(sql, new { Id = id }) > 0;
         }
 
         public async Task<IEnumerable<InventoryItem>> GetInventories()
         {
-            return await inventoryContext.Inventories.ToListAsync();
+            var sql = "Select * FROM Inventories";
+            return await connection.QueryAsync<InventoryItem>(sql);
         }
 
         public async Task<InventoryItem> GetInventory(int id)
         {
-            return await inventoryContext.Inventories.FirstOrDefaultAsync(i => i.Id == id);
+            var sql = "SELECT * FROM Inventories WHERE Id = @Id";
+            return await connection.QuerySingleOrDefaultAsync<InventoryItem>(sql, new { Id = id });
         }
 
         public async Task<IEnumerable<InventoryItem>> GetInventoryByName(string name)
         {
-            return await inventoryContext.Inventories.Where(i => i.ItemName == name).ToListAsync();
+            var sql = "SELECT * FROM Inventories WHERE ItemName = @ItemName";
+            return await connection.QuerySingleOrDefaultAsync<IEnumerable<InventoryItem>>(sql, new { ItemName = name });
         }
 
         public async Task<bool> UpdateInventoryItemAsync(InventoryItem inventory)
         {
-            inventoryContext.Update(inventory);
-            return await inventoryContext.SaveChangesAsync() > 1;
+            var sql = "UPDATE Inventories SET ItemName = @ItemName, StockQty = @StockQty, ReorderQty = @ReorderQty, PriorityStatus = @PriorityStatus, AddedDate = @AddedDate  WHERE Id = @Id";
+            return await connection.ExecuteAsync(sql, inventory) > 0;
         }
     }
 }
