@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
-using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Cart.Api.Controllers
@@ -36,7 +35,7 @@ namespace Cart.Api.Controllers
 
         [HttpPost]
         [ProducesResponseType(typeof(CustomerCart), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<CustomerCart>> UpdateBasketAsync([FromBody] CustomerCart value)
+        public async Task<ActionResult<CustomerCart>> UpdateCartAsync([FromBody] CustomerCart value)
         {
             return Ok(await repository.UpdateCartAsync(value));
         }
@@ -53,9 +52,9 @@ namespace Cart.Api.Controllers
 
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
-        public async Task DeleteCartByIdAsync(string id)
+        public async Task<bool> DeleteCartByIdAsync(Guid id)
         {
-            await repository.DeleteCartAsync(id);
+            return await repository.DeleteCartAsync(id);
         }
     }
 }

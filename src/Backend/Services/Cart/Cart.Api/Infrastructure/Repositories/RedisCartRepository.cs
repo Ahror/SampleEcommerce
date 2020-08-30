@@ -3,6 +3,7 @@ using Cart.Api.Models;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using StackExchange.Redis;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,9 +23,9 @@ namespace Cart.Api.Infrastructure.Repositories
             _database = redis.GetDatabase();
         }
 
-        public async Task<bool> DeleteCartAsync(string id)
+        public async Task<bool> DeleteCartAsync(Guid id)
         {
-            return await _database.KeyDeleteAsync(id);
+            return await _database.KeyDeleteAsync(id.ToString());
         }
 
         public IEnumerable<string> GetUsers()

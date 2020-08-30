@@ -7,7 +7,7 @@ namespace Cart.UnitTests
     public abstract class BaseAutoMockedTest<T> : IDisposable
      where T : class
     {
-        protected T ClassUnderTest => Mocker.Create<T>();
+        protected T Controller => Mocker.Create<T>();
 
         protected AutoMock Mocker { get; }
 
