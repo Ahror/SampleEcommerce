@@ -7,106 +7,88 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" 
+    xmlns:pancakeView ="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     x:Class="SampleEcommerce.Mobile.Views.LoginPage"
     Visual="Material">
-    <abstractions:BaseContentPage.Resources>
-        <Color x:Key="AccentColor">#4491e7</Color>
-        <Color x:Key="TextColor">#ffffff</Color>
-    </abstractions:BaseContentPage.Resources>
-    <Grid>
-        <Grid>
-            <Grid BackgroundColor="{StaticResource AccentColor}">
-                <Label
-                    VerticalOptions="Start"
-                    Grid.Row="0"
-                    Margin="10,80,0,0"
-                    FontAttributes="Bold"
-                    FontSize="Title"
-                    Text="Hello, Welcome Back"
-                    HorizontalOptions="Center"
-                    TextColor="{StaticResource TextColor}" />
-            </Grid>
-            <Grid >
-                <Frame Margin="0,200,0,-40" BackgroundColor="{StaticResource TextColor}" Padding="20" CornerRadius="40" HeightRequest="100">
-                    <Grid >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"  />
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="auto"  />
-                        </Grid.RowDefinitions>
+    <Grid BackgroundColor="{StaticResource Primary}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label
+            VerticalOptions="Center"
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="Title"
+            Text="Hello, Welcome Back"
+            HorizontalOptions="Center"
+            TextColor="{StaticResource TextColor}" />
+        <Grid Grid.Row="1">
+            <pancakeView:PancakeView BackgroundColor="{StaticResource TextColor}" Padding="20" CornerRadius="50,50,0,0">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"  />
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*"  />
+                    </Grid.RowDefinitions>
 
-                        <Label
+                    <Label
                             Grid.Row="0"
                             Margin="10,0,0,0"
                             FontAttributes="Bold"
                             FontSize="Title"
                             Text="Sign in"
                             HorizontalOptions="Center"
-                            TextColor="{StaticResource AccentColor}" />
-                        <StackLayout Grid.Row="1" Margin="0,25">
-                            <Entry Placeholder="Login" Text="{Binding Username}" BackgroundColor="Transparent" />
-                            <Entry IsPassword="True" Text="{Binding Password}" Placeholder="Password" BackgroundColor="Transparent" />
-                            <Label
+                            TextColor="{StaticResource Primary}" />
+                    <StackLayout Grid.Row="1" VerticalOptions="Center">
+                        <Entry Placeholder="Login" Text="{Binding UserName}" BackgroundColor="Transparent" />
+                        <Entry IsPassword="True" Text="{Binding Password}" Placeholder="Password" BackgroundColor="Transparent" />
+                        <Label
                                 HorizontalOptions="Center"
-                                Text="Forgot password? Tap here"
+                                Text="Forget password? Tap here"
                                 TextColor="DarkGray" />
-                        </StackLayout>
-                        <StackLayout Grid.Row="2" Orientation="Vertical">
-                            <Button
-                                BackgroundColor="{StaticResource AccentColor}"
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Orientation="Vertical">
+                        <Button
+                                BackgroundColor="{StaticResource Primary}"
                                 Command="{Binding LoginCommand}"
-                                CornerRadius="7"
+                                CornerRadius="25"
                                 HeightRequest="50"
                                 Text="Sign in"
                                 TextColor="White" />
-                            <Button
-                                Margin="0,10,0,0"
-                                BackgroundColor="#3e5a9b"
-                                HeightRequest="50"
-                                CornerRadius="7"
-                                Command="{Binding LoginWithFacebookCommand}"
-                                Text="Sign in by Facebook"
-                                TextColor="White" />
-                            <Label
-                                Padding="50,0"
-                                HorizontalOptions="Center"
-                                LineBreakMode="WordWrap"
-                                Text="By tapping Sign in, you agree with our Term of Service and Privacy Policy"
-                                TextColor="DarkGray" />
-                        </StackLayout>
-                        <StackLayout
+                    </StackLayout>
+                    <StackLayout
                             Grid.Row="3"
                             HorizontalOptions="Center"
                             Spacing="1"
-                            VerticalOptions="End">
+                            VerticalOptions="Center">
                         <Label Text="Don't you have an account yet?" />
 
                         <Label 
-                            Text="Sign Up" 
+                            Text="Create one" 
                             FontAttributes="Bold"
                             HorizontalOptions="Center"
                             FontSize="Medium"
                             BackgroundColor="Transparent"
-                            TextColor="{StaticResource AccentColor}">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
-                                </Label.GestureRecognizers>
-                            </Label>
-                        </StackLayout>
-                    </Grid>
+                            TextColor="{StaticResource Primary}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Grid>
 
-                </Frame>
-                <Grid IsVisible="{Binding IsBusy}">
-                    <ActivityIndicator
+            </pancakeView:PancakeView>
+            <Grid IsVisible="{Binding IsBusy}">
+                <ActivityIndicator
                         HeightRequest="100"
                         HorizontalOptions="CenterAndExpand"
                         IsEnabled="{Binding IsBusy}"
                         IsRunning="{Binding IsBusy}"
                         VerticalOptions="CenterAndExpand"
                         WidthRequest="100" />
-                </Grid>
             </Grid>
         </Grid>
     </Grid>

@@ -1,6 +1,5 @@
 ﻿using Xamarin.Forms;
 using Autofac;
-using SampleEcommerce.Mobile.Abstractions;
 using SampleEcommerce.Mobile.Services.Navigation;
 
 namespace SampleEcommerce.Mobile

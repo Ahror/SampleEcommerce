@@ -34,7 +34,7 @@ namespace SampleEcommerce.Mobile.Services.Authentication
             return appSettings.Customer != null;
         }
 
-        public async Task<bool> CheckLoginAsync(string login, bool isUser)
+        public async Task<bool> CheckLoginAsync(string login)
         {
             return await httpClient.CheckCustomerLogin(login);
         }

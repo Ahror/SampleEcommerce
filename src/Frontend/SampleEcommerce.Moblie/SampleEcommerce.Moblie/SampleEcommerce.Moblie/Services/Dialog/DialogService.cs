@@ -3,7 +3,6 @@ using Xamarin.Forms;
 
 namespace SampleEcommerce.Mobile.Services.Dialog
 {
-
     public class DialogService : IDialogService
     {
         private Page _currentPage => Application.Current.MainPage;
@@ -24,5 +23,4 @@ namespace SampleEcommerce.Mobile.Services.Dialog
             return (result == cancel, result);
         }
     }
-
 }

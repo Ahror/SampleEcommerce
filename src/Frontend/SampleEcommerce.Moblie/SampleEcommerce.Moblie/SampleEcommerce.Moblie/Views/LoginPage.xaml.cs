@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace SampleEcommerce.Mobile.Views
 {
@@ -8,6 +9,7 @@ namespace SampleEcommerce.Mobile.Views
         public LoginPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
