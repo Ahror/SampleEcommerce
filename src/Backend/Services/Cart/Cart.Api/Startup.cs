@@ -24,10 +24,7 @@ namespace Cart.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddGrpc(options =>
-            {
-                options.EnableDetailedErrors = true;
-            });
+            services.AddGrpc();
 
             services.AddControllers(options =>
             {

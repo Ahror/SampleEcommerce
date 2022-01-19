@@ -4,15 +4,17 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 using Cart.Api.Models;
+using GrpcCart;
+using System.Linq;
 
-namespace GrpcCart
+namespace Cart.Api.Grps
 {
-    public class CartSerivce : CartGrps.CartGrpsBase
+    public class CartService : CartGrps.CartGrpsBase
     {
         private readonly ICartRepository _repository;
-        private readonly ILogger<CartSerivce> _logger;
+        private readonly ILogger<CartService> _logger;
 
-        public CartSerivce(ICartRepository repository, ILogger<CartSerivce> logger)
+        public CartService(ICartRepository repository, ILogger<CartService> logger)
         {
             _repository = repository;
             _logger = logger;
